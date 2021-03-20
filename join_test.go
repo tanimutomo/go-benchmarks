@@ -17,7 +17,6 @@ func BenchmarkJoin_Strings(b *testing.B) {
 }
 
 func BenchmarkJoin_Iterate(b *testing.B) {
-	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		_ = fmt.Sprintf(" %s.`%s", alias, fields[0])
 		for _, f := range fields[1:] {
